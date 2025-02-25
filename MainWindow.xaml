@@ -1,0 +1,29 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:av="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="av" x:Class="DemoExample.MainWindow"
+        Title="Клиенты" Height="460" Width="800">
+    <Grid>
+        <Label Content="GarderobShop" HorizontalAlignment="Left" Margin="52,29,0,0" VerticalAlignment="Top" FontFamily="Segoe Print" FontSize="16"/>
+        <TextBox x:Name="NameTextBox" Margin="309,374,367,44"/>
+        <TextBox x:Name="SurnameTextBox" Margin="69,380,638,44" />
+        <TextBox x:Name="EmailTextBox" Margin="71,339,637,88" RenderTransformOrigin="0.368,1.788" />
+        <TextBox x:Name="PhoneTextBox" Margin="309,339,367,87" />
+        <Button x:Name="AddButton" Content="Добавить" HorizontalAlignment="Left" Width="96" Background="#FF4056CE" Click="AddButton_Click" Margin="470,362,0,44"/>
+        <ListView x:Name="Client" ItemsSource="{Binding Clients}" Margin="0,67,0,0" Height="255" VerticalAlignment="Top">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" DisplayMemberBinding="{Binding Id_order}" />
+                    <GridViewColumn Header="Имя" DisplayMemberBinding="{Binding Name}" />
+                    <GridViewColumn Header="Фамилия" DisplayMemberBinding="{Binding Surname}" />
+                    <GridViewColumn Header="Email" DisplayMemberBinding="{Binding Email}" />
+                    <GridViewColumn Header="Телефон" DisplayMemberBinding="{Binding Phone_number}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="Эл.почта" HorizontalAlignment="Left" Margin="0,330,0,0" VerticalAlignment="Top" Width="64"/>
+        <Label Content="Фамилия" HorizontalAlignment="Left" Margin="2,374,0,0" VerticalAlignment="Top"/>
+        <Label Content="Номер телефона" HorizontalAlignment="Left" Margin="186,335,0,0" VerticalAlignment="Top" Height="26" Width="112" RenderTransformOrigin="0.428,0.452"/>
+        <Label Content="Имя " HorizontalAlignment="Left" Margin="261,374,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
